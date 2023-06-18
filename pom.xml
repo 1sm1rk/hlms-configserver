@@ -5,8 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.0.5</version>
 	</parent>
 	<groupId>de.homelabs</groupId>
 	<artifactId>hlms-configserver</artifactId>
@@ -15,7 +14,8 @@
 	<description>hlms-configserver</description>
 	<properties>
 		<java.version>17</java.version>
-		<spring-cloud.version>2022.0.1</spring-cloud.version>
+		<spring-cloud.version>2022.0.3</spring-cloud.version>
+		<native.maven.plugin.version>0.9.22</native.maven.plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -27,6 +27,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
@@ -46,8 +59,24 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+						<buildpacks>
+							<buildpack>gcr.io/paketo-buildpacks/graalvm</buildpack>
+							<buildpack>gcr.io/paketo-buildpacks/java-native-image</buildpack>
+						</buildpacks>
+					</image>
+					<buildArgs>
+						<arg>--verbose</arg>
+						<arg>--initialize-at-build-time=org.slf4j.LoggerFactory,org.slf4j.simple.SimpleLogger,org.slf4j.impl.StaticLoggerBinder</arg>
+						<arg>--initialize-at-run-time=io.netty.util.internal.logging.Log4JLogger,io.netty.util.AbstractReferenceCounted,io.netty.channel.epoll,io.netty.handler.ssl,io.netty.channel.unix</arg>
+					</buildArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.graalvm.buildtools</groupId>
+				<artifactId>native-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
