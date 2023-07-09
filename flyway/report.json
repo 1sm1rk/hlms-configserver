@@ -1,0 +1,293 @@
+{
+  "individualResults": [
+    {
+      "schemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "allSchemasEmpty": true,
+      "timestamp": "2023-06-19T09:57:10.790746811",
+      "operation": "info",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "schemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "allSchemasEmpty": true,
+      "timestamp": "2023-06-19T09:57:19.333557025",
+      "operation": "info",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "schemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "allSchemasEmpty": true,
+      "timestamp": "2023-06-19T10:00:15.217366350",
+      "operation": "info",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": true,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:00:21.658888605",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": true,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:00:51.485648785",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": true,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:01:11.193197203",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1",
+      "schemaName": "",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "create config table",
+          "type": "SQL",
+          "filepath": "/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1__create_config_table.sql",
+          "executionTime": 79
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:04:21.654814831",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "schemaVersion": "1",
+      "schemaName": "",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "rawVersion": "1",
+          "description": "create config table",
+          "type": "SQL",
+          "installedOnUTC": "2023-06-19T08:04:21.820090Z",
+          "state": "Success",
+          "undoable": "No",
+          "filepath": "/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1__create_config_table.sql",
+          "undoFilepath": "",
+          "installedBy": "sm1rk",
+          "executionTime": 79
+        }
+      ],
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "allSchemasEmpty": false,
+      "timestamp": "2023-06-19T10:06:48.256394703",
+      "operation": "info",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "1",
+      "targetSchemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:20:36.684632558",
+      "operation": "migrate",
+      "exception": "Migration V1_1__add_test_config_data.sql failed\n-----------------------------------------------\nSQL State  : 42601\nError Code : 0\nMessage    : ERROR: syntax error at end of input\n  Position: 261\nLocation   : sql/V1_1__add_test_config_data.sql (/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1_1__add_test_config_data.sql)\nLine       : 1\nStatement  : INSERT INTO properties (APPLICATION, PROFILE, LABEL, PROP_KEY, VALUE) VALUES\n    (\u0027config-client\u0027, \u0027dev\u0027, \u0027latest\u0027, \u0027user.role\u0027, \u0027dev\u0027),\n    (\u0027config-client\u0027, \u0027test\u0027, \u0027latest\u0027, \u0027user.role\u0027, \u0027test\u0027),\n    (\u0027config-client\u0027, \u0027prod\u0027, \u0027latest\u0027, \u0027user.role\u0027, \u0027prod\u0027),\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": "1",
+      "targetSchemaVersion": "1.1",
+      "schemaName": "",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "description": "add test config data",
+          "type": "SQL",
+          "filepath": "/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1_1__add_test_config_data.sql",
+          "executionTime": 12
+        }
+      ],
+      "migrationsExecuted": 1,
+      "success": true,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:21:12.810156158",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "schemaName": "",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "rawVersion": "1",
+          "description": "create config table",
+          "type": "SQL",
+          "installedOnUTC": "2023-06-19T08:04:21.820090Z",
+          "state": "Success",
+          "undoable": "No",
+          "filepath": "/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1__create_config_table.sql",
+          "undoFilepath": "",
+          "installedBy": "sm1rk",
+          "executionTime": 79
+        },
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "rawVersion": "1.1",
+          "description": "add test config data",
+          "type": "SQL",
+          "installedOnUTC": "2023-06-19T08:21:12.945522Z",
+          "state": "Success",
+          "undoable": "No",
+          "filepath": "/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1_1__add_test_config_data.sql",
+          "undoFilepath": "",
+          "installedBy": "sm1rk",
+          "executionTime": 12
+        }
+      ],
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "allSchemasEmpty": false,
+      "timestamp": "2023-06-19T10:21:20.470632218",
+      "operation": "info",
+      "exception": null,
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:25:38.256236444",
+      "operation": "migrate",
+      "exception": "Migration V1__create_config_table.sql failed\n--------------------------------------------\nSQL State  : 42601\nError Code : 0\nMessage    : ERROR: syntax error at or near \"auto_increment\"\n  Position: 51\nLocation   : sql/V1__create_config_table.sql (/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1__create_config_table.sql)\nLine       : 1\nStatement  : create table properties (\n    id integer not null auto_increment,\n    CREATED_ON datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n    APPLICATION varchar(255),\n    PROFILE varchar(255),\n    LABEL varchar(255),\n    PROP_KEY varchar(255),\n    VALUE varchar(255), primary key (id)\n)\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:27:34.259404492",
+      "operation": "migrate",
+      "exception": "Migration V1__create_config_table.sql failed\n--------------------------------------------\nSQL State  : 42601\nError Code : 0\nMessage    : ERROR: syntax error at or near \"ON\"\n  Position: 92\nLocation   : sql/V1__create_config_table.sql (/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1__create_config_table.sql)\nLine       : 1\nStatement  : create table properties (\n    id Serial,\n    CREATED_ON datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n    APPLICATION varchar(255),\n    PROFILE varchar(255),\n    LABEL varchar(255),\n    PROP_KEY varchar(255),\n    VALUE varchar(255), primary key (id)\n)\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": null,
+      "schemaName": "",
+      "migrations": [],
+      "migrationsExecuted": 0,
+      "success": false,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:33:44.872365816",
+      "operation": "migrate",
+      "exception": "Migration V1__create_config_table.sql failed\n--------------------------------------------\nSQL State  : 42704\nError Code : 0\nMessage    : ERROR: type \"datetime\" does not exist\n  Position: 94\nLocation   : sql/V1__create_config_table.sql (/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1__create_config_table.sql)\nLine       : 11\nStatement  : /* create config properties table */\ncreate table properties (\n    id Serial,\n    CREATED_ON datetime DEFAULT CURRENT_TIMESTAMP ,\n    APPLICATION varchar(255),\n    PROFILE varchar(255),\n    LABEL varchar(255),\n    PROP_KEY varchar(255),\n    VALUE varchar(255), primary key (id)\n)\n",
+      "licenseFailed": false
+    },
+    {
+      "initialSchemaVersion": null,
+      "targetSchemaVersion": "1.1",
+      "schemaName": "",
+      "migrations": [
+        {
+          "category": "Versioned",
+          "version": "1",
+          "description": "create config table",
+          "type": "SQL",
+          "filepath": "/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1__create_config_table.sql",
+          "executionTime": 109
+        },
+        {
+          "category": "Versioned",
+          "version": "1.1",
+          "description": "add test config data",
+          "type": "SQL",
+          "filepath": "/home/sm1rk/projekte/java/hlms/hlms-configserver/flyway/sql/V1_1__add_test_config_data.sql",
+          "executionTime": 16
+        }
+      ],
+      "migrationsExecuted": 2,
+      "success": true,
+      "flywayVersion": "9.17.0",
+      "database": "cloud_config",
+      "warnings": [],
+      "timestamp": "2023-06-19T10:35:05.093267375",
+      "operation": "migrate",
+      "exception": null,
+      "licenseFailed": false
+    }
+  ]
+}
